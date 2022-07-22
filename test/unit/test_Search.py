@@ -1,5 +1,5 @@
-# unit test case
 import unittest
+
 from Searching_Candidates.Search import SearchGoogle
 
 
