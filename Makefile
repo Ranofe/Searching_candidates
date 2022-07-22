@@ -1,5 +1,5 @@
 PYTHON_BINARY := python3
-VIRTUAL_ENV := env
+VIRTUAL_ENV := venv
 VIRTUAL_BIN := $(VIRTUAL_ENV)/bin
 PROJECT_NAME := Searching_Candidates
 TEST_DIR := test
