@@ -50,7 +50,12 @@ class SearchGoogle:
     def scrape_google(self):
         query = urllib.parse.quote_plus(self.query)
         response = self.get_source(
-            "https://www.google.com.ar/search?q=" + query + '&num=' + str(self.pages_per_query) + '&start=' + str(self.start_num)
+            "https://www.google.com.ar/search?q="
+            + query
+            + '&num='
+            + str(self.pages_per_query)
+            + '&start='
+            + str(self.start_num)
         )
 
         links = list(response.html.absolute_links)
