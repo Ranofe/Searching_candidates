@@ -20,6 +20,8 @@ HEADERS = [
 class SearchGoogle:
     def __init__(self, query):
         self.query = query
+        self.pages_per_query = 5
+        self.start_num = 0
 
     def print_query(self):
         print(self.query)
@@ -47,10 +49,8 @@ class SearchGoogle:
 
     def scrape_google(self):
         query = urllib.parse.quote_plus(self.query)
-        pages_per_query = 5
-        start_num = 0
         response = self.get_source(
-            "https://www.google.com.ar/search?q=" + query + '&num=' + str(pages_per_query) + '&start=' + str(start_num)
+            "https://www.google.com.ar/search?q=" + query + '&num=' + str(self.pages_per_query) + '&start=' + str(self.start_num)
         )
 
         links = list(response.html.absolute_links)
