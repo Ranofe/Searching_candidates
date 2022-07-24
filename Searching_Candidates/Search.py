@@ -3,7 +3,7 @@ import random
 import urllib
 
 import requests
-from requests_html import HTMLSession #type: ignore
+from requests_html import HTMLSession  # type: ignore
 
 HEADERS = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124'
