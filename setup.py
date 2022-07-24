@@ -15,6 +15,8 @@ DEV_REQUIREMENTS = [
     'flake8 == 4.*',
     'isort == 5.*',
     'mypy == 0.942',
+    'types-setuptools',
+    'types-requests',
     'pytest == 7.*',
     'pytest-cov == 3.*',
     'twine == 4.*',
