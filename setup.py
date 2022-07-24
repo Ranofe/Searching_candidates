@@ -4,8 +4,9 @@ with open('README.md', 'r') as fh:
     long_description = fh.read()
 
 REQUIREMENTS = [
-    # Add your list of production dependencies here, eg:
-    # 'requests == 2.*',
+    'requests_html',
+    'requests',
+    'urllib',
 ]
 
 DEV_REQUIREMENTS = [
@@ -21,9 +22,9 @@ DEV_REQUIREMENTS = [
 ]
 
 setuptools.setup(
-    name='PROJECT_NAME_URL',
+    name='Searching Candidates',
     version='0.1.0',
-    description='Your project description here',
+    description='Look for linkedin candidates scarping web pages',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='http://github.com/USERNAME/PROJECT_NAME_URL',
