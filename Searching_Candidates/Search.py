@@ -11,17 +11,15 @@ HEADERS = [
     'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36',
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212'
     ' Safari/537.36',
-    'Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148',
-    'Mozilla/5.0 (Linux; Android 11; SM-G960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Mobile'
-    ' Safari/537.36',
 ]
 
 
 class SearchGoogle:
     def __init__(self, query):
         self.query = query
-        self.pages_per_query = 5
+        self.pages_per_query = 5  # Upgrade when there is a strategy for avoiding google banned ip
         self.start_num = 0
+        self.output = []
 
     def print_query(self):
         print(self.query)
@@ -74,3 +72,36 @@ class SearchGoogle:
                 links.remove(url)
 
         return links
+
+    def parse_results(self):
+        css_identifier_result = ".tF2Cxc"
+        css_identifier_title = "h3"
+        css_identifier_link = ".yuRUbf a"
+        css_identifier_text = ".VwiC3b"
+
+        self.results = self.response.html.find(css_identifier_result)
+
+        for result in self.results:
+            item = {
+                'title': result.find(css_identifier_title, first=True).text,
+                'link': result.find(css_identifier_link, first=True).attrs['href'],
+                'text': result.find(css_identifier_text, first=True).text,
+            }
+
+            self.output.append(item)
+
+    def google_search(self):
+        self.get_results()
+        self.parse_results()
+        return self.output
+
+    def get_results(self):
+        query = urllib.parse.quote_plus(self.query)
+        self.response = self.get_source(
+            "https://www.google.com.ar/search?q="
+            + query
+            + '&num='
+            + str(self.pages_per_query)
+            + '&start='
+            + str(self.start_num)
+        )
