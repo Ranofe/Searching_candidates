@@ -6,7 +6,6 @@ with open('README.md', 'r') as fh:
 REQUIREMENTS = [
     'requests_html',
     'requests',
-    'urllib',
 ]
 
 DEV_REQUIREMENTS = [
@@ -27,9 +26,9 @@ setuptools.setup(
     description='Look for linkedin candidates scarping web pages',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='http://github.com/USERNAME/PROJECT_NAME_URL',
-    author='USERNAME',
-    license='MIT',
+    url='https://github.com/Ranofe/Searching_candidates',
+    author='Ranofe',
+    license='?',
     packages=setuptools.find_packages(
         exclude=[
             'examples',
@@ -37,7 +36,7 @@ setuptools.setup(
         ]
     ),
     package_data={
-        'PROJECT_NAME_URL': [
+        'Searching_Candidates': [
             'py.typed',
         ]
     },
