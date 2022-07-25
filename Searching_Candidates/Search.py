@@ -15,6 +15,8 @@ HEADERS = [
 
 
 class SearchGoogle:
+    """SearchGoogle is responsible of obtaining the links of the candidates linkedin"""
+
     def __init__(self, query):
         self.query = query
         self.pages_per_query = 5  # Upgrade when there is a strategy for avoiding google banned ip
