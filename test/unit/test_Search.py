@@ -12,10 +12,11 @@ class TestQuery(unittest.TestCase):
         Query = SearchGoogle(query)
         self.assertEqual(query, Query.query, 'Query not equal')
 
+    @unittest.skip("searching banned")
     def test_google_search(self):
         query = "Racing Club Avellaneda"
         Search = SearchGoogle(query)
         output = Search.google_search()
-        # self.assertGreater(len(output), 0, "Searching not working")
-        # result = output[0]['text'].find(query.split()[0])
-        # self.assertGreaterEqual(result, 0, "Search didn't work")
+        self.assertGreater(len(output), 0, "Searching not working")
+        result = output[0]['text'].find(query.split()[0])
+        self.assertGreaterEqual(result, 0, "Search didn't work")
