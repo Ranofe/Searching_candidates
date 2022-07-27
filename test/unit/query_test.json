@@ -1,0 +1,12 @@
+{
+  "Title": {
+    "Must": ["QA Automation"],
+    "Optional": ["Ssr", "Sr"]
+  },
+  "Experience": [">2 Years"],
+  "Location": ["Buenos Aires", "CABA", "Grater Buenos Aires"],
+  "Studies": ["Informatic", "Engineering", "Developer", "Software"],
+  "Skills": ["Python", "Java", "CI", "JENKINS", "Selenium", "Appium", "Testrail", "Agile"],
+  "Language": ["English", "Ingles", "Intermedio"],
+  "Other": ["ISTQB", "Automatizaci\u00f3n", "CSE"]
+}
