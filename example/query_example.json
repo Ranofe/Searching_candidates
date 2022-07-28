@@ -1,12 +1,30 @@
 {
   "Title": {
-    "Must": ["QA Automation"],
+    "Must": ["QA", "Automation"],
     "Optional": ["Ssr", "Sr"]
   },
-  "Experience": [">2 Years"],
-  "Location": ["Buenos Aires", "CABA", "Grater Buenos Aires"],
-  "Studies": ["Informatic", "Engineering", "Developer", "Software"],
-  "Skills": ["Python", "Java", "CI", "JENKINS", "Selenium", "Appium", "Testrail", "Agile"],
-  "Language": ["English", "Ingles", "Intermedio"],
-  "Other": ["ISTQB", "Automatizaci\u00f3n", "CSE"]
+  "Experience":  {
+    "Must": [],
+    "Optional": ["2 years"]
+  },
+  "Location":  {
+    "Must": [],
+    "Optional": ["Buenos Aires", "CABA", "Grater Buenos Aires"]
+  },
+  "Studies":  {
+    "Must": [],
+    "Optional": ["Informatic", "Engineering", "Developer", "Software"]
+  },
+  "Skills":  {
+    "Must": [],
+    "Optional": ["Python", "Java", "CI", "JENKINS", "Selenium", "Appium", "Testrail", "Agile"]
+  },
+  "Language":  {
+    "Must": [],
+    "Optional": ["English", "Ingles", "Intermedio"]
+  },
+  "Other":  {
+    "Must": [],
+    "Optional": ["ISTQB", "Automatizaci\u00f3n", "CSE"]
+  }
 }

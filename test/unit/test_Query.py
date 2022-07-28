@@ -14,7 +14,7 @@ class TestQuery(unittest.TestCase):
         q_sub_query = {'Must': ['QA Automation'], 'Optional': ['Ssr', 'Sr']}
 
         Q = Querier(file_path)
-        expected_result = "(QA Automation) AND (Ssr OR Sr)"
+        expected_result = "((QA Automation) AND (Ssr OR Sr))"
         result = Q.sub_query_maker(q_sub_query)
         self.assertEqual(result, expected_result, "Sub query error")
 
